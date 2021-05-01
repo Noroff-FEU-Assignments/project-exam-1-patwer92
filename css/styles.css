@@ -1,5 +1,6 @@
 :root {
-    --main-color: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    --water-color: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    --main-color: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.25));
     --font-color: #16424b;
     --white-color: rgb(240, 240, 240);
     --blue-color: #6cdbeb;
@@ -17,7 +18,7 @@ html {
 }
 
 body {
-    background: var(--main-color);
+    background: var(--water-color);
     color: var(--font-color);
     font-family: "Open Sans", sans-serif;
 }
@@ -35,7 +36,7 @@ nav {
     height: 10vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -68,13 +69,12 @@ ul div {
 }
 
 ul div:hover {
-    background: var(--main-color);
+    background: var(--water-color);
     color: var(--font-color);
     border: 2px solid var(--font-color);
 }
 
 .logo-container {
-    margin-left: 1.5%;
     width: 10rem;
     display: flex;
     justify-content: center;
@@ -83,7 +83,7 @@ ul div:hover {
 
 .logo {
     font-family: "Pacifico", cursive;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: var(--font-color);
     cursor: pointer;
     padding: 0.8rem;
@@ -97,7 +97,6 @@ ul div:hover {
 }
 
 .social-container {
-    margin-right: 1.5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,6 +169,7 @@ ul div:hover {
 }
 
 .homepage-section h1 {
+    margin-bottom: 10%;
     font-family: "Permanent Marker", cursive;
     font-size: 7rem;
     letter-spacing: 1rem;
@@ -198,11 +198,11 @@ ul div:hover {
     align-items: center;
     justify-content: space-evenly;
     cursor: pointer;
-    transition: 1s;
+    transition: 0.2s;
 }
 
 .home-btn:hover {
-    background: var(--main-color);
+    background: var(--water-color);
     color: var(--font-color);
 }
 
@@ -234,4 +234,69 @@ ul div:hover {
 
 .latestpost-section {
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: var(--white-color);
+    min-height: 80vh;
+    width: 70%;
+    background: var(--main-color);
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    -webkit-backdrop-filter: blur(2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h2 {
+    margin-top: -6%;
+    margin-bottom: 6%;
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+}
+
+.bubble1,
+.bubble2 {
+    background: var(--white-color);
+    background: var(--main-color);
+    height: 30rem;
+    width: 30rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.bubble1 {
+    top: 115%;
+    left: 1%;
+}
+
+.bubble2 {
+    top: 155%;
+    right: 1%;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    margin: 1rem;
+    height: 40rem;
+    width: 30rem;
+    background: var(--main-color);
+    border-radius: 2rem;
+}
+
+.post-arrow {
+    font-size: 3rem;
+    margin: 0 3rem;
 }
