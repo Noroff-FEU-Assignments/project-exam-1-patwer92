@@ -4,6 +4,7 @@
     --font-color: #16424b;
     --white-color: rgb(240, 240, 240);
     --blue-color: #6cdbeb;
+    --green-color: #65dfc9;
 }
 
 * {
@@ -141,12 +142,15 @@ ul li:hover {
     align-items: center;
     justify-content: center;
     border-radius: 2rem;
-    transition: 1s;
+    color: var(--blue-color);
+}
+
+.search-btn:hover {
+    color: var(--white-color);
 }
 
 .search-icon {
     font-size: 1.5rem;
-    color: var(--white-color);
     transform: rotate(90deg);
 }
 
@@ -163,7 +167,7 @@ ul li:hover {
     padding: 0 0.4rem;
     font-size: 3rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 1s;
 }
 
 .social-icon:hover {
@@ -404,8 +408,8 @@ footer {
     font-size: 3rem;
     cursor: pointer;
     transition: 0.3s;
-    color: var(--blue-color);
-    transition: 0.3s;
+    color: var(--green-color);
+    transition: 1s;
 }
 
 .social-footer:hover {
@@ -424,7 +428,7 @@ footer {
         margin-bottom: 0;
     }
     100% {
-        margin-bottom: 3.5rem;
+        margin-bottom: 2.5rem;
     }
 }
 
