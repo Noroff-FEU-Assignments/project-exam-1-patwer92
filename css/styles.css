@@ -33,7 +33,7 @@ a {
 /* HEADER */
 
 nav {
-    height: 10vh;
+    min-height: 10vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -96,22 +96,44 @@ ul div:hover {
     border-radius: 50%;
 }
 
-.social-container {
+.nav-container {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 15rem;
 }
 
-.search {
-    height: 100%;
+.search-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    height: 3rem;
+    padding: 1rem;
 }
 
-.search div {
+.search-input {
+    font-size: 1.3rem;
+    color: black;
+    line-height: 2.8rem;
+    float: left;
+    outline: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border: none;
+    transition: 0.4s;
+    width: 0;
+}
+
+.search-container:hover > .search-input {
+    background: var(--white-color);
+    width: 18rem;
+    padding: 0 0.6rem;
+}
+
+.search-btn {
+    margin-left: 1%;
     background: var(--font-color);
+    cursor: pointer;
     width: 3rem;
     height: 3rem;
     display: flex;
@@ -121,19 +143,13 @@ ul div:hover {
     transition: 1s;
 }
 
-.search div:hover {
-    width: 10rem;
-    justify-content: flex-end;
-}
-
 .search-icon {
-    margin-right: 5%;
     font-size: 1.5rem;
     color: var(--white-color);
     transform: rotate(90deg);
 }
 
-.social {
+.social-container {
     width: 15rem;
     height: 100%;
     display: flex;
@@ -250,14 +266,12 @@ ul div:hover {
     -webkit-backdrop-filter: blur(2rem);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
 .container h2 {
-    margin-top: -6%;
-    margin-bottom: 6%;
-    font-size: 3rem;
+    font-size: 4rem;
     letter-spacing: 0.1rem;
 }
 
@@ -287,11 +301,13 @@ ul div:hover {
     justify-content: space-evenly;
     align-items: center;
     min-width: 100rem;
+    min-height: 40rem;
 }
 
 .blog-card {
+    overflow: hidden;
     margin: 1rem;
-    height: 40rem;
+    min-height: 40rem;
     width: 30rem;
     background: var(--main-color);
     border-radius: 2rem;
@@ -308,6 +324,10 @@ ul div:hover {
 .blog-card h3,
 .blog-card p {
     margin: 2rem 1rem;
+}
+
+.blog-card h3 {
+    text-align: center;
 }
 
 .blog-card p {
@@ -344,25 +364,26 @@ footer {
 }
 
 .newsletter-container {
-    height: 10rem;
-    width: 30rem;
+    height: 8rem;
+    width: 32.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     background: var(--water-color);
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .newsletter-container p {
     font-size: 2rem;
+    text-transform: capitalize;
     font-weight: 600;
 }
 .newsletter-container input {
     background: var(--white-color);
     width: 25rem;
     height: 3rem;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     border: none;
     text-align: center;
 }
