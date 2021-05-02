@@ -261,46 +261,68 @@ ul li:hover {
 }
 
 .container {
-    background: var(--white-color);
+    /* background: red; */
+    /* background: var(--white-color); */
     min-height: 80vh;
-    width: 70%;
-    background: var(--main-color);
+    width: 100%;
+    /* background: var(--main-color); */
     border-radius: 2rem;
     z-index: 2;
     backdrop-filter: blur(2rem);
     -webkit-backdrop-filter: blur(2rem);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
 .container h2 {
+    margin-bottom: 3rem;
     font-size: 4rem;
     letter-spacing: 0.1rem;
 }
 
 .bubble1,
-.bubble2 {
+.bubble2,
+.bubble3,
+.bubble4 {
+    z-index: -1;
     background: var(--white-color);
     background: var(--main-color);
-    height: 30rem;
-    width: 30rem;
     position: absolute;
     border-radius: 50%;
+    overflow: hidden;
 }
 
 .bubble1 {
-    top: 115%;
-    left: 1%;
+    height: 20rem;
+    width: 20rem;
+    top: 105%;
+    left: 9.5%;
 }
 
 .bubble2 {
-    top: 155%;
-    right: 1%;
+    height: 10rem;
+    width: 10rem;
+    top: 99.5%;
+    left: 5%;
+}
+
+.bubble3 {
+    height: 10rem;
+    width: 10rem;
+    top: 190%;
+    right: 5%;
+}
+.bubble4 {
+    height: 20rem;
+    width: 20rem;
+    top: 175%;
+    right: 10%;
 }
 
 .card-container {
+    margin-bottom: 5%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -314,7 +336,8 @@ ul li:hover {
     margin: 1rem;
     height: 45rem;
     width: 30rem;
-    background: var(--main-color);
+    /* background: var(--main-color); */
+    background: #bef0ed;
     border-radius: 2rem;
 }
 
