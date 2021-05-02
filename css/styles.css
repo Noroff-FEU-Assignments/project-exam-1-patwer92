@@ -350,6 +350,7 @@ ul li:hover {
 }
 
 .blog-card h3 {
+    text-transform: capitalize;
     text-align: center;
     font-size: 1.6rem;
 }
@@ -374,7 +375,7 @@ ul li:hover {
 /* FOOTER */
 
 footer {
-    min-height: 20vh;
+    min-height: 30vh;
     background: var(--font-color);
     display: flex;
     flex-direction: column;
@@ -421,9 +422,23 @@ footer {
     text-align: center;
 }
 
+.footer-social-container {
+    height: 15rem;
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.footer-social-container h4 {
+    color: var(--white-color);
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
 .social-footer {
     padding: 0 0.4rem;
-    font-size: 3rem;
+    font-size: 4rem;
     cursor: pointer;
     transition: 0.3s;
     color: var(--green-color);
@@ -435,7 +450,7 @@ footer {
 }
 
 .arrow-container {
-    width: 11rem;
+    width: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
