@@ -308,7 +308,7 @@ ul li:hover {
 .blog-card {
     overflow: hidden;
     margin: 1rem;
-    min-height: 40rem;
+    height: 45rem;
     width: 30rem;
     background: var(--main-color);
     border-radius: 2rem;
@@ -316,7 +316,7 @@ ul li:hover {
 
 .blog-card img {
     object-fit: cover;
-    height: 50%;
+    height: 20rem;
     width: 100%;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
@@ -324,15 +324,17 @@ ul li:hover {
 
 .blog-card h3,
 .blog-card p {
-    margin: 2rem 1rem;
+    padding: 1rem 1.5rem;
 }
 
 .blog-card h3 {
     text-align: center;
+    font-size: 1.6rem;
 }
 
 .blog-card p {
-    font-size: 1.2rem;
+    line-height: 2.5rem;
+    font-size: 1.4rem;
 }
 
 .img-arrow {
@@ -422,12 +424,12 @@ footer {
         margin-bottom: 0;
     }
     100% {
-        margin-bottom: 4rem;
+        margin-bottom: 3.5rem;
     }
 }
 
 .arrow-up {
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--blue-color);
     cursor: pointer;
     transition: 0.3s;
@@ -436,6 +438,6 @@ footer {
 .arrow-up:hover {
     color: var(--white-color);
     animation-name: up-animation;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    animation-duration: 0.8s;
+    animation-iteration-count: 2;
 }
