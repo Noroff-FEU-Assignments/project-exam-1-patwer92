@@ -26,12 +26,12 @@
     </head>
     <body>
         <header>
-            <nav>
+            <nav id="nav">
                 <div class="logo-container">
                     <a href="index.html" class="logo">Tropico</a>
                 </div>
                 <ul>
-                    <div><li>Home</li></div>
+                    <li class="current-page">Home</li>
                     <li>Blog</li>
                     <li>About</li>
                     <li>Contact</li>
@@ -96,10 +96,22 @@
             </div>
             <footer>
                 <div class="footer-container">
+                    <div class="footer-social-container">
+                        <i class="fab fa-facebook-square social-footer"></i>
+                        <i class="fab fa-instagram-square social-footer"></i>
+                        <i class="fab fa-twitter-square social-footer"></i>
+                    </div>
                     <div class="newsletter-container">
                         <p>Sign up to our newsletter</p>
                         <input type="text" name="newsfeed" placeholder="Please enter your e-mail">
                     </div>
+                    <div class="arrow-container">
+                        <a href="#nav">
+                            <i class="fas fa-arrow-up arrow-up"></i>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
                 <p class="trademark">&reg; 2021 Tropico Blog, Patrick Werner. All rights reserved.</p>
             </footer>
