@@ -127,7 +127,7 @@ ul li:hover {
 
 .search-container:hover > .search-input {
     background: var(--white-color);
-    width: 18rem;
+    width: 15rem;
     padding: 0 0.6rem;
 }
 
