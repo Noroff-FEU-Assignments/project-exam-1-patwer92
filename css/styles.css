@@ -133,7 +133,7 @@ ul li:hover {
 }
 
 .search-btn {
-    margin-left: -5%;
+    margin-left: -8%;
     background: var(--font-color);
     cursor: pointer;
     width: 3rem;
@@ -482,7 +482,7 @@ footer {
         margin-bottom: 0;
     }
     100% {
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -490,12 +490,12 @@ footer {
     font-size: 4rem;
     color: var(--blue-color);
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 .arrow-up:hover {
     color: var(--white-color);
     animation-name: up-animation;
     animation-duration: 0.8s;
-    animation-iteration-count: 2;
+    animation-iteration-count: infinite;
 }
