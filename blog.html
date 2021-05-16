@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tropico | Home</title>
+    <title>Tropico | Blog</title>
     <meta name="description"
         content="Tropico is a blog website that dives into some of the most magnificent and beautiful tropical places in the world. Travel through exotic environments and experience the lifestyle of Tropico." />
 
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
     <link rel="icon" href="data:;base64,=" />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/blog.css" />
 </head>
 
 <body>
@@ -29,15 +29,15 @@
             <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
             <ul class="menu">
                 <a href="index.html">
-                    <li class="current-page">Home</li>
+                    <li>Home</li>
                 </a>
                 <a href="blog.html">
-                    <li>Blog</li>
+                    <li class="current-page">Blog</li>
                 </a>
-                <a href="index.html">
+                <a href="#">
                     <li>About</li>
                 </a>
-                <a href="index.html">
+                <a href="#">
                     <li>Contact</li>
                 </a>
             </ul>
@@ -53,37 +53,26 @@
                     <i class="fab fa-instagram-square social-icon"></i>
                     <i class="fab fa-twitter-square social-icon"></i>
                 </div>
-
             </div>
         </nav>
     </header>
     <main>
-        <div class="homepage-section" id="nav">
-            <a href="#latestpost">
-                <h1>experience </br> the tropico blog</h1>
-            </a>
-            <a href="#latestpost" class="home-btn">
-                <p>Take a Dive</p>
-                <i class="fas fa-chevron-down arrow-down"></i>
-            </a>
-        </div>
-        <div class="latestpost-section" id="latestpost">
+        <div class="blog-section" id="nav">
             <div class="container">
-                <h2>Latest Posts</h2>
-                <div class="carousel-container">
-                    <i id="previous-btn" class="fas fa-chevron-left img-arrow"></i>
-                    <div class="card-container">
-                        <!-- API content -->
-                    </div>
-                    <i id="next-btn" class="fas fa-chevron-right img-arrow"></i>
+                <div class="breadcrumb">
+                    <p><a href="index.html">Home ></a><span class="bold-text"> Blog</span></p>
                 </div>
+                <h1>Blog Posts</h1>
+                <div class="blog-container">
+                    <!-- API Content -->
+                </div>
+
             </div>
-            <div class="bubble1"></div>
-            <div class="bubble2"></div>
+            <button class="viewmore-btn">View more</button>
         </div>
     </main>
     <footer>
-        <div class="footer-container">
+        <div class=" footer-container">
             <div class="footer-social-container">
                 <h4>Follow us on</h4>
                 <h4>social media</h4>
@@ -106,8 +95,7 @@
         </div>
         <p class="copyright">&#169; 2021 Tropico Blog, Patrick Werner. All rights reserved.</p>
     </footer>
-
-    <script src="./js/script.js"></script>
+    <script src="./js/blog.js"></script>
 </body>
 
 </html>

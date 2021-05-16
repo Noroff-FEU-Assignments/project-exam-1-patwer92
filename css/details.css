@@ -33,6 +33,13 @@ a {
     color: inherit;
 }
 
+.bold-text {
+    font-weight: 600;
+}
+
+.capitalize-text {
+    text-transform: capitalize;
+}
 /* HEADER */
 
 header {
@@ -201,230 +208,132 @@ ul li:hover {
 .social-icon:hover {
     color: var(--white-color);
 }
-/* HOMEPAGE SECTION */
 
-.homepage-section {
+/* DETAILS PAGE SECTION */
+
+.details-section {
     min-height: 100vh;
-    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url(/images/pexels-stijn-dijkstra-2499791.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: top center;
 }
 
-.homepage-section h1 {
-    margin-bottom: 10%;
-    font-family: "Permanent Marker", cursive;
-    font-size: 8rem;
-    letter-spacing: 0.5rem;
-    text-transform: capitalize;
-    background: -webkit-linear-gradient(#65dfc9, #6cdbeb);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    cursor: pointer;
+.breadcrumb {
+    margin: 8rem 0 0 0;
+    width: 50%; 
+    font-size: 1.7rem;
 }
 
-.home-btn {
-    margin-top: 5%;
-    width: 30rem;
-    height: 5rem;
-    background: var(--font-color);
-    color: var(--white-color);
-    border-radius: 2rem;
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    cursor: pointer;
-    transition: 0.2s ease-out;
+.previous_btn-container {
+    margin: 1% 0 5% 0;
+    width: 50%;
 }
 
-.home-btn:hover {
-    background: var(--water-color);
-    color: var(--font-color);
-}
-
-.home-btn p {
+#previous-btn {
     font-size: 2rem;
-    text-transform: capitalize;
-    font-weight: 600;
-    letter-spacing: 0.2rem;
+    transition: .2s ease-out;
+    opacity: 0.75;
 }
 
-@keyframes down-animation {
-    0% {
-        margin-top: 0;
-    }
-    100% {
-        margin-top: 1.5rem;
-    }
-}
-
-.arrow-down {
-    font-size: 2.5rem;
-}
-
-.home-btn:hover > .arrow-down {
-    animation-name: down-animation;
-    animation-duration: 0.8s;
-    animation-iteration-count: infinite;
-}
-
-/* LATEST-POST SECTION */
-
-.latestpost-section {
-    min-height: 100vh;
-    padding: 5% 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#previous-btn:hover {
+    opacity: 1;
 }
 
 .container {
-    min-height: 100%;
-    width: 100%;
+    margin-bottom: 6%;
+    min-height: auto;
+    width: 50%;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     backdrop-filter: blur(0.1rem);
     -webkit-backdrop-filter: blur(0.1rem);
 }
 
-.container h2 {
-    margin-bottom: 5%;
-    font-size: 4rem;
-    letter-spacing: 0.1rem;
-}
-
-.bubble1,
-.bubble2,
-.bubble3,
-.bubble4 {
-    z-index: -1;
-    background: var(--white-color);
-    background: var(--main-color);
-    position: absolute;
-    border-radius: 50%;
-    overflow: hidden;
-}
-
-.bubble1 {
-    height: 20rem;
-    width: 20rem;
-    top: 105%;
-    left: 9.5%;
-}
-
-.bubble2 {
-    height: 10rem;
-    width: 10rem;
-    top: 99.5%;
-    left: 5%;
-}
-
-.carousel-container {
+.img-container {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: auto;
-}
-
-.card-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: auto;
-    height: auto;
-    overflow: hidden;
-}
-
-.blog-card {
-    overflow: hidden;
-    margin: 1rem;
+    width: 100%;
     height: 45rem;
-    width: 30rem;
-    background: var(--gray-color);
-    border-radius: 2rem;
-    transition: 0.5s;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.blog-card:hover {
-    transform: scale(1.03);
-}
-
-.blog-card img {
-    background-size: cover;
-    height: 20rem;
-    width: 30rem;
+.img-container img {
+    width: 100%;
+    height: 100%;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
+    cursor: pointer;
     object-fit: cover;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease-out;
 }
 
-.blog-card p {
-    margin: 0 5%;
+.show-img {
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease-out;
+    z-index: 2;
 }
 
-.blog-card h3 {
+.show-img.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.original-img {
+    position: absolute;
+    height: 75%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all .3s ease-out;
+}
+
+.original-img.open {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.text-container {
+    height: auto;
+    padding: 6%;
+    width: 100%;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    flex-direction: column;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    background: var(--gray-color);
+    backdrop-filter: blur(0.1rem);
+    -webkit-backdrop-filter: blur(0.1rem);
+}
+
+.text-container h1 {
+    font-size: 2.5rem;
     text-transform: capitalize;
-    text-align: center;
-    font-size: 1.6rem;
+    margin: 0% 2% 4% 2%;
 }
 
-.blog-card p {
-    line-height: 2.5rem;
+.text-container p {
     font-size: 1.4rem;
-}
-
-.continue-btn {
-    margin-bottom: 10%;
-    font-size: 1.3rem;
-    letter-spacing: 0.1rem;
-    background: var(--water-color);
-    color: var(--font-color);
-    padding: 0.6rem 1rem;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    text-transform: capitalize;
-    transition: 0.2s;
+    margin: 2% 0%;
+    line-height: 2.5rem;
     
 }
 
-.continue-btn:hover {
-    background: var(--font-color);
-    color: var(--white-color);
-}
-
-.img-arrow {
-    font-size: 2.5rem;
-    margin: 1%;
-    cursor: pointer;
-    transition: 0.3s;
-    border: 4px solid var(--font-color);
-    padding: 0.4rem 0.9rem;
-    border-radius: 50%;
-    transition: 0.2s ease-out;
-}
-
-.img-arrow:hover {
-    background: var(--font-color);
-    color: var(--white-color);
+.text-container h4 p {
+    font-weight: 600;
 }
 
 /* FOOTER */
@@ -649,45 +558,30 @@ footer {
         margin-left: 5%;
     }
 
-    /* HOME PAGE SECTION RESPONSIVE MODE (TABLET VIEW) */
+    /* DETAILS PAGE RESPONSIVE MODE (TABLET VIEW) */
 
-    .homepage-section h1 {
-        font-size: 5rem;
+    .container {
+        width: 80%;
     }
 
-    .home-btn {
-        margin-top: 15%;
+    .breadcrumb {
+        width: 80%;
+        font-size: 1.5rem;
     }
 
-    /* LATEST POST SECTION RESPONSIVE MODE (TABLET VIEW) */
-
-    .latestpost-section {
-        min-height: auto;
+    .previous_btn-container {
+        width: 80%;
+        margin: 2% 0 5% 0;
     }
 
-    .container h2 {
-        margin-bottom: 10%;
-        font-size: 3rem;
-        
+    .img-container {
+        height: 40rem;
     }
 
-    .carousel-container {
-        flex-direction: column;
-    }
-
-    .card-container {
-        flex-direction: column;
-    }
-
-    .bubble3 {
-        top: 338%;
-    }
-    .bubble4 {
-        top: 320%;
-    }
-
-    .img-arrow {
-        opacity: 1;
+    .original-img {
+        width: 100%;
+        height: 60%;
+        object-fit:unset;
     }
 
     /* FOOTER RESPONSIVE MODE */
@@ -697,57 +591,38 @@ footer {
     }
 
     .footer-container {
-        min-height: 100%;
+        height: 100%;
         flex-direction: column;
     }
 
-    .copyright {
-        font-size: 1.2rem;
-    }
-    
     .footer-social-container, .newsletter-container, .arrow-container {
         margin: 5% 0;
     }
-
-
 }
 
-/* HOME PAGE RESPONSIVE MODE (MOBILE VIEW) */
+/* DETAILS PAGE RESPONSIVE MODE (MOBILE VIEW) */
 
 @media only screen and (max-width: 767px) {
-
-    .homepage-section {
-        min-height: 100vh;
-    }
-   
-    .homepage-section h1 {
-        font-size: 3rem;
+    .previous_btn-container {
+        margin: 4% 0 16% 0;
     }
 
-    .home-btn {
-        margin-top: 25%;
-        width: 25rem;
-        height: 4rem;
+    .img-container {
+        height: 20rem;
     }
 
-    .home-btn p {
-        font-size: 1.5rem;
+    .text-container h1 {
+        font-size: 1.9rem;
+        margin: 6% 2% 8% 2%;
     }
 
-    .arrow-down {
-        font-size: 2rem;
+    .text-container p {
+        margin: 4% 2%;
+        font-size: 1.3rem;
     }
 
-    /* LASTEST-POST PAGE RESPONSIVE MODE */
-
-    .container h2 {
-        margin: 10% 0;
+    .original-img {
+        height: 45%;
     }
-
-    #next-btn {
-        margin: 0 0 10% 0;
-    }
-
-
 
 }

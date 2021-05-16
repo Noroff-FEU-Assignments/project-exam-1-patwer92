@@ -1,43 +1,66 @@
-const url = "https://www.tropico.one/wp-json/wp/v2/media";
-const container = document.querySelector(".image-carousel");
+const url = "https://www.tropico.one/wp-json/wp/v2/media/";
+const cardContainer = document.querySelector(".card-container")
+const previousBtn = document.querySelector("#previous-btn");
+const nextBtn = document.querySelector("#next-btn");
 
 let length = 3;
 let offset = 0;
 
-
 async function makeApiCall() {
-    try{
+    try {
         const response = await fetch(url +
-            `?per_page=${length}&offset=${offset}`
-            );
+            `?per_page=${length}&offset=${offset}&_embed`);
+
         const json = await response.json();
+
+        if (offset === 0) {
+            previousBtn.style.display = "none";
+        } else {
+            previousBtn.style.display = "block";
+        }
+
+        if (json.length < 3) {
+            nextBtn.style.display = "none";
+        } else {
+            nextBtn.style.display = "block";
+        }
 
         console.log(json);
 
-        container.innerHTML = "";
+        cardContainer.innerHTML = "";
 
-        json.forEach((posts) => {
-
-            container.innerHTML += 
-
-            `
-                <div class="blog-card">
-                    <img src="${posts.source_url}" alt="${posts.alt_text}">
-                    <h3 class="blog-title">${posts.title.rendered}</h3>
-                    
-                    <p class="bold align-center">Date: ${posts.date}</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis tempore est optio ipsa assumenda. 
-                    Debitis, velit veritatis perferendis qui at enim optio.</p>  
-                </div> 
-            `;
-
-        });
-        
-
+        for (let i = 0; i < json.length; i++) {
+            cardContainer.innerHTML +=
+                `   
+                        <div class="blog-card">
+                            <a href="details.html?id=${json[i].id}">
+                                <img src="${json[i].source_url}" alt="${json[i].alt_text}">
+                            </a>
+                            <h3 class="blog-title">${json[i].title.rendered}</h3>
+                            <p>${json[i].caption.rendered}</p>
+                            <a class="continue-btn" href="details.html?id=${json[i].id}">continue reading</a>
+                        </div>
+                    </a>
+                `
+        };
     }
     catch (error) {
         console.log(error);
     }
 }
+
+
+previousBtn.addEventListener("click", () => {
+    if (offset >= 3) {
+        offset -= 3;
+        makeApiCall();
+    }
+});
+
+nextBtn.addEventListener("click", () => {
+    offset += 3;
+    makeApiCall();
+});
+
 
 makeApiCall();
