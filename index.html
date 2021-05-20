@@ -17,6 +17,18 @@
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
     <link rel="icon" href="data:;base64,=" />
     <link rel="stylesheet" href="/css/styles.css" />
+
+    <!-- Hotjar Tracking Code for https://tropicoblog.netlify.app/ -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 2412152, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 </head>
 
 <body>
@@ -34,10 +46,10 @@
                 <a href="blog.html">
                     <li>Blog</li>
                 </a>
-                <a href="index.html">
+                <a href="about.html">
                     <li>About</li>
                 </a>
-                <a href="index.html">
+                <a href="contact.html">
                     <li>Contact</li>
                 </a>
             </ul>
@@ -73,6 +85,9 @@
                 <div class="carousel-container">
                     <i id="previous-btn" class="fas fa-chevron-left img-arrow"></i>
                     <div class="card-container">
+                        <div class="error-container">
+                            <div class="loader"></div>
+                        </div>
                         <!-- API content -->
                     </div>
                     <i id="next-btn" class="fas fa-chevron-right img-arrow"></i>
@@ -106,7 +121,6 @@
         </div>
         <p class="copyright">&#169; 2021 Tropico Blog, Patrick Werner. All rights reserved.</p>
     </footer>
-
     <script src="./js/script.js"></script>
 </body>
 

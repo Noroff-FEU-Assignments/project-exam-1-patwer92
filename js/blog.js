@@ -35,6 +35,8 @@ async function makeApiCall() {
 
     } catch (error) {
         console.log(error);
+        blogContainer.innerHTML = displayError();
+        viewMoreBtn.style.display = "none";
     }
 }
 
@@ -78,3 +80,9 @@ viewMoreBtn.addEventListener("click", () => {
 });
 
 makeApiCall();
+
+/* ERROR HANDLING */
+
+function displayError(message = "An error has occured. </br>Something went wrong when trying to fetch API.") {
+    return `<div class="error">${message}</div>`
+}

@@ -46,6 +46,7 @@ async function makeApiCall() {
     }
     catch (error) {
         console.log(error);
+        cardContainer.innerHTML = displayError();
     }
 }
 
@@ -64,3 +65,9 @@ nextBtn.addEventListener("click", () => {
 
 
 makeApiCall();
+
+/* ERROR HANDLING */
+
+function displayError(message = "An error has occured. </br>Something went wrong when trying to fetch API.") {
+    return `<div class="error">${message}</div>`
+}

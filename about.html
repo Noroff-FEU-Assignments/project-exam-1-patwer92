@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tropico | Blog</title>
+    <title>Tropico | About</title>
     <meta name="description"
         content="Tropico is a blog website that dives into some of the most magnificent and beautiful tropical places in the world. Travel through exotic environments and experience the lifestyle of Tropico." />
 
@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
         integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous" />
     <link rel="icon" href="data:;base64,=" />
-    <link rel="stylesheet" href="/css/blog.css" />
+    <link rel="stylesheet" href="/css/about.css" />
 
     <!-- Hotjar Tracking Code for https://tropicoblog.netlify.app/ -->
     <script>
@@ -41,10 +41,10 @@
             <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
             <ul class="menu">
                 <a href="index.html">
-                    <li>Home</li>
+                    <li class="current-page">Home</li>
                 </a>
                 <a href="blog.html">
-                    <li class="current-page">Blog</li>
+                    <li>Blog</li>
                 </a>
                 <a href="about.html">
                     <li>About</li>
@@ -69,25 +69,41 @@
         </nav>
     </header>
     <main>
-        <div class="blog-section" id="nav">
-            <div class="container">
-                <div class="breadcrumb">
-                    <p><a href="index.html">Home </a>><span class="bold-text"> Blog</span></p>
-                </div>
-                <h1>Blog Posts</h1>
-                <div class="blog-container">
-                    <div class="error-container">
-                        <div class="loader"></div>
-                    </div>
-                    <!-- API Content -->
-                </div>
-
+        <section class="about-section" id="nav">
+            <div class="breadcrumb">
+                <p><a href="index.html">Home </a>><span class="bold-text"> About</span></p>
             </div>
-            <button class="viewmore-btn">View more</button>
-        </div>
+            <h2>About</h2>
+            <div class="container">
+
+                <div class="about-content">
+                    <div class="img-container">
+                        <img src="/images/philipp-kammerer-puHmzDRDMf0-unsplash.jpg"
+                            alt="Photographer with red hat taking picture of green landscape">
+                    </div>
+                    <div class="text-container">
+                        <h1>
+                            Hello, my name is Patrick. Welcome to my blog site, which also is my project exam in
+                            Front-end study at Noroff - School Of Technology And Digital Media.
+                        </h1>
+
+                        <p>I really could have just put some lorem ipsum on this amazing about page, however I figured
+                            I'd rather leave a personal mark.
+                        </p>
+
+                        <p>
+                            If you're still reading this, then I hope you enjoyed
+                            this super awesome Tropico blog website. If you'd like to give me some feedback, then please
+                            contact me on discord: pation#3627. Peace.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
-        <div class=" footer-container">
+        <div class="footer-container">
             <div class="footer-social-container">
                 <h4>Follow us on</h4>
                 <h4>social media</h4>
@@ -110,8 +126,6 @@
         </div>
         <p class="copyright">&#169; 2021 Tropico Blog, Patrick Werner. All rights reserved.</p>
     </footer>
-    <script src="./js/displayError.js"></script>
-    <script src="./js/blog.js"></script>
 </body>
 
 </html>
