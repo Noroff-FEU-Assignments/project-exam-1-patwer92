@@ -295,10 +295,11 @@ textarea::-moz-placeholder, .input-form::-moz-placeholder, .input-form, textarea
     margin: 2% 0;
     min-height: 4rem;
     border: none;
-    border-radius: 2rem;
+    border-radius: 0.5rem;
     background: var(--water-color);
     font-family: "Open Sans", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.1rem;
     font-weight: 600;
     color: var(--font-color);
     cursor: pointer;
@@ -376,7 +377,7 @@ footer {
     height: 3.5rem;
     border: none;
     border-radius: 2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 600;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;

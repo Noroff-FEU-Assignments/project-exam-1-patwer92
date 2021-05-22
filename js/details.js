@@ -16,7 +16,6 @@ async function makeApiCall() {
 
         detailsContainer.innerHTML =
             `
-
             <div class="breadcrumb">
                 <p><a href="index.html">Home</a> > <a href="blog.html">Blog</a> ><span class="bold-text capitalize-text"> ${json.title.rendered}</span>
                 </p>
@@ -67,10 +66,7 @@ async function makeApiCall() {
                         Tropico &#174; 2021
                     </p>
                 </div>
-            </div>
-
-
-                    
+            </div>        
         `;
         const blogImage = document.querySelector(".img-container img");
         const showImage = document.querySelector(".show-img");
