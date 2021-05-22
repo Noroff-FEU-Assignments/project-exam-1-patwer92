@@ -68,15 +68,14 @@ ul {
     justify-content: center;
     width: 70rem;
     overflow: hidden;
-
 }
 
-ul a{
+ul a {
     display: block;
 }
 
 ul li {
-    margin: 1rem;  
+    margin: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,7 +85,7 @@ ul li {
     font-weight: 600;
     letter-spacing: 0.1rem;
     cursor: pointer;
-    transition: .2s ease-out;
+    transition: 0.2s ease-out;
 }
 
 ul li:hover {
@@ -94,8 +93,6 @@ ul li:hover {
     border-radius: 2rem;
     transform: scale(1.1);
 }
-
-
 
 .current-page {
     border: 2px solid var(--font-color);
@@ -117,7 +114,7 @@ ul li:hover {
     color: var(--font-color);
     cursor: pointer;
     padding: 0.8rem;
-    transition: .7s;
+    transition: 0.7s;
 }
 
 .logo:hover {
@@ -235,8 +232,8 @@ ul li:hover {
     margin-top: 5%;
     width: 30rem;
     height: 5rem;
-    background: var(--font-color);
-    color: var(--white-color);
+    background: var(--water-color);
+    color: var(--font-color);
     border-radius: 2rem;
     border: none;
     display: flex;
@@ -247,8 +244,8 @@ ul li:hover {
 }
 
 .home-btn:hover {
-    background: var(--water-color);
-    color: var(--font-color);
+    background: var(--font-color);
+    color: var(--white-color);
 }
 
 .home-btn p {
@@ -403,7 +400,6 @@ ul li:hover {
     font-weight: 600;
     text-transform: capitalize;
     transition: 1.5s ease;
-    
 }
 
 .continue-btn:hover {
@@ -499,7 +495,6 @@ footer {
 .newsletter-btn:hover {
     background: var(--font-color);
     color: var(--white-color);
-    
 }
 
 .footer-social-container {
@@ -601,11 +596,9 @@ footer {
     }
 }
 
-
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1000px) {
-
     /* HEADER RESPONSIVE MODE */
 
     ul {
@@ -620,9 +613,9 @@ footer {
     header .menu {
         clear: both;
         max-height: 0;
-        transition: max-height .2s ease-out;
+        transition: max-height 0.2s ease-out;
     }
-    
+
     header .menu-icon {
         padding: 28px 20px;
         position: absolute;
@@ -632,16 +625,16 @@ footer {
         right: 0;
         margin-right: 5%;
     }
-    
+
     header .menu-icon .nav-icon {
         background: var(--font-color);
         display: block;
         height: 2px;
         width: 18px;
         position: relative;
-        transition: background .2s ease-out;
+        transition: background 0.2s ease-out;
     }
-    
+
     header .menu-icon .nav-icon:before {
         background: var(--font-color);
         content: "";
@@ -650,9 +643,9 @@ footer {
         width: 100%;
         height: 100%;
         top: 5px;
-        transition: all .2s ease-out;
+        transition: all 0.2s ease-out;
     }
-    
+
     header .menu-icon .nav-icon:after {
         background: var(--font-color);
         content: "";
@@ -661,27 +654,26 @@ footer {
         width: 100%;
         height: 100%;
         top: -5px;
-        transition: all .2s ease-out;
+        transition: all 0.2s ease-out;
     }
-    
+
     header .menu-btn {
         display: none;
     }
-    
+
     header .menu-btn:checked ~ .menu {
         max-height: 240px;
     }
-    
+
     header .menu-btn:checked ~ .menu-icon .nav-icon {
         background: transparent;
-    
     }
-    
+
     header .menu-btn:checked ~ .menu-icon .nav-icon:before {
         transform: rotate(-45deg);
         top: 0;
     }
-    
+
     header .menu-btn:checked ~ .menu-icon .nav-icon:after {
         transform: rotate(45deg);
         top: 0;
@@ -715,7 +707,6 @@ footer {
     .container h2 {
         margin-bottom: 10%;
         font-size: 3rem;
-        
     }
 
     .carousel-container {
@@ -751,18 +742,17 @@ footer {
     .copyright {
         font-size: 1.2rem;
     }
-    
-    .footer-social-container, .newsletter-container, .arrow-container {
+
+    .footer-social-container,
+    .newsletter-container,
+    .arrow-container {
         margin: 5% 0;
     }
-
-
 }
 
 /* HOME PAGE RESPONSIVE MODE (MOBILE VIEW) */
 
 @media only screen and (max-width: 767px) {
-   
     .homepage-section h1 {
         font-size: 3rem;
     }
@@ -790,7 +780,4 @@ footer {
     #next-btn {
         margin: 0 0 10% 0;
     }
-
-
-
 }
