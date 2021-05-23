@@ -1,5 +1,7 @@
 const detailsContainer = document.querySelector(".details-section");
 
+const title = document.querySelector("title")
+
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -11,6 +13,8 @@ async function makeApiCall() {
         const json = await response.json();
 
         console.log(json);
+
+        title.innerHTML = `Tropico | ${json.title.rendered}`;
 
         detailsContainer.innerHTML = "";
 

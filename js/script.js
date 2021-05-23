@@ -47,6 +47,8 @@ async function makeApiCall() {
     catch (error) {
         console.log(error);
         cardContainer.innerHTML = displayError();
+        previousBtn.style.display = "none";
+        nextBtn.style.display = "none";
     }
 }
 
